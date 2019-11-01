@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    no cache t1 is {{ t1 }}
+</p>
+
+{{ t1 }}
+{% load cache %}
+{% cache 30 test_t %}
+<p>
+    cache t1 is {{ t1 }}
+</p>
+{% endcache %}
+</body>
+</html>
